@@ -1,0 +1,134 @@
+html {
+    background: url(https://www.mclibre.org/consultar/htmlcss/css/ejemplos/fondos/tartan.png);
+    /*Aquest serà el fons de totes les pàgines*/
+}
+body {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /*Això només es per llevarli tot el marge
+    y acomodar bé el menú de navegació y el
+    footer en totes les pàgines*/
+}
+nav {
+    background-color: #337;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center; /*Per acomodar bé els enllaços dins el menú*/
+    margin-left: -10px;
+    margin-right: -10px;
+    /*Això pot pareixer extrany però és l'única sol·lució que vaig trobar
+    per poder fer que el menú de navegació ocupi tot el ample de la pàgina
+    sense haver'hi de llevar el marge a tot el body, que així queda lleig
+    (segurament hi hagi algo millor, pero per ara me serveix)
+    */
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    /*Així ocupa tot l'espai del nav*/
+    list-style: none; /*Per llevarli les viñetes*/
+}
+nav li {
+    display: inline; /*posa els enllaços en horizontal*/
+    margin-right: 60px; /*per espaiar un enllaç de altre*/
+    padding: 11px; /*Per tal de que ocupi tot el espai del nav y no quedi raro*/
+}
+nav a {
+   color: white;
+   text-decoration: none; /*Per llevarli el subrallat als enllaços*/
+   font-weight: bold; /*negrita*/
+}
+nav li:hover {
+    background-color: #555; /*al pasar-li el cursor per damunt*/
+}
+footer#creditos {
+    height: 100px;
+    background-color: #333;
+    text-align: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    padding: 20px;
+    color: white;
+}
+/*el footer de totes les pagines*/
+footer#creditos a{
+    color: white;
+}
+/*format per l'enllaç a la pagina del institut*/
+.titulos {
+    text-align: center;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    /*Estilització de titols de les pagines*/
+}
+main#main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: justify;
+    /*per donarli format al element main de la pagina principal(#main)*/
+}
+main#main h2{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*ESTILITZACIÓ TABLA*/
+table{
+    width: 100%;
+    border-collapse: collapse; /*per que el borde sigui d'una linea*/
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+td, th{
+    padding: 10px;
+    border: 1px solid;
+    text-align: center;
+}
+th {
+    background-color: gray;
+}
+td {
+    background-color: white;
+}
+td:hover{
+    background-color: black;
+    color: white; /*Efecte especial :-D*/
+}
+th:hover{
+    background-color: purple;
+    color: white;
+}
+.multimedia{
+text-align: center;
+}
+/*amb aquesta clase puc aplicarle estils a les fotos i videos
+sense repetir massa codi*/
+.multimedia img, video {
+
+    width: 40vw;/*Amb vw el ample será sempre del 40% de la pantalla del navegador,
+    encara que estigui mode finestra*/
+    height: auto; /*l'altura s'adapta a l'ample per tal de que tengui la llargaria indicada
+    per cualsevol amplada*/
+    display: inline-block; /*un adevora altre*/
+} 
+video:first-child{
+    margin-right:5vw ; /*el primer element video tendrà aques marge*/
+}
+video:last-child{
+    margin-left: 5vw;/*el segon element (perque només hi ha dos) tendrà aquest marge*/
+}
+#imagen_yt {
+    margin: 50px;
+}
+.titulos#audios > img:last-child{
+    margin: 15%;
+    /*per asignar-li marge a aquest element en especific*/
+}
+audio {
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    /*a tots els audios*/
+}
